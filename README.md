@@ -86,7 +86,7 @@
 #
 # -----------------------------------------------------------------------------------------------------------------
 #
-# For now this is it, laiter I'll continue to add the rest of the documentation with time, as a simples resume for now:
+# For now this is it, later I'll continue to add the rest of the documentation with time, as a simples resume for now:
 # - The IAction interface is what implement the Effect class, she is the base of the skills and comsumibles items
 #
 # - Skill class simples has a effect stored and when tried to used, she configure the EffectParam of the effect and 
