@@ -1,0 +1,17 @@
+[
+  {
+    "$type": "Consumable",
+    "Effect": {
+      "$type": "HealingEffect",
+      "Param": {
+        "$type": "TargetParam",
+        "Target": null,
+        "HealthParam": 10
+      },
+      "ActionTypeEnum": 1
+    },
+    "ID": "59",
+    "Name": "Healing Potion",
+    "TargetTypeEnum": 2
+  }
+]

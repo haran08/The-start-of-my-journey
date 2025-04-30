@@ -1,0 +1,43 @@
+[
+  {
+    "Enemies": [
+      {
+        "Characters": [
+          "Stone amarok",
+          "Stone amarok"
+        ],
+        "Items": [
+          "Healing Potion"
+        ]
+      },
+      {
+        "Characters": [
+          "Skeleton_Prepared"
+        ],
+        "Items": [
+          "Healing Potion"
+        ]
+      },
+      {
+        "Characters": [
+          "Skeleton",
+          "Skeleton"
+        ],
+        "Items": [
+          "Healing Potion",
+          "Dagger",
+          "Dagger"
+        ]
+      },
+      {
+        "Characters": [
+          "The Uncode One"
+        ],
+        "Items": [
+          "Healing Potion"
+        ]
+      }
+    ],
+    "Name": "Main Combat"
+  }
+]

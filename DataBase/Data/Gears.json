@@ -1,0 +1,40 @@
+[
+  {
+    "$type": "Weapon",
+    "Skills": [
+      "Slash Attack"
+    ],
+    "ID": "9",
+    "Name": "Sword"
+  },
+  {
+    "$type": "Weapon",
+    "Skills": [
+      "Attack Stab"
+    ],
+    "ID": "1",
+    "Name": "Dagger"
+  },
+  {
+    "$type": "Weapon",
+    "Skills": [
+      "Quick Shot"
+    ],
+    "ID": "3",
+    "Name": "Vin's Bow"
+  },
+  {
+    "$type": "Armor",
+    "ID": "30",
+    "Name": "Stone Armor",
+    "DefenseModifier": 2,
+    "ResistenceType": "melee"
+  },
+  {
+    "$type": "Armor",
+    "ID": "31",
+    "Name": "Object Sight",
+    "DefenseModifier": 2,
+    "ResistenceType": "decoding"
+  }
+]

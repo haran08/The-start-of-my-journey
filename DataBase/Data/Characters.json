@@ -1,0 +1,61 @@
+[
+  {
+    "Skills": [
+      "Skip Turn",
+      "Punch"
+    ],
+    "Weapon": "Sword",
+    "Armor": "Object Sight",
+    "ID": "3fa4e1be-15ba-40c2-a061-f3abf513ee11",
+    "Name": "Tog",
+    "MaxHealth": 25
+  },
+  {
+    "Skills": [
+      "Skip Turn",
+      "Punch"
+    ],
+    "Weapon": "Vin's Bow'",
+    "ID": "3fa4e1be-15ba-40c2-a061-f3ab123df85",
+    "Name": "Vin Fletcher",
+    "MaxHealth": 15
+  },
+  {
+    "Skills": [
+      "Skip Turn",
+      "Bone crunch"
+    ],
+    "Weapon": "Dagger",
+    "ID": "2de37567-2180-432d-8e1a-58d3b30fefef",
+    "Name": "Skeleton_Prepared",
+    "MaxHealth": 10
+  },
+  {
+    "Skills": [
+      "Skip Turn",
+      "Bone crunch"
+    ],
+    "ID": "2de37567-2180-432d-8e1a-58d3b30fefef",
+    "Name": "Skeleton",
+    "MaxHealth": 10
+  },
+  {
+    "Skills": [
+      "Skip Turn",
+      "Bite"
+    ],
+    "Armor": "Stone Armor",
+    "ID": "2de37567-2180-432d-8e1a-58d3b30asesa",
+    "Name": "Stone Amarok",
+    "MaxHealth": 8
+  },
+  {
+    "Skills": [
+      "Skip Turn",
+      "unraveling attack"
+    ],
+    "ID": "bcf18547-6641-4544-8591-4bbeefc4569e",
+    "Name": "The Uncode One",
+    "MaxHealth": 25
+  }
+]

@@ -1,0 +1,136 @@
+[
+  {
+    "$type": "skill",
+    "ID": "6bbddd8a-e813-417d-94d9-87d91c326279",
+    "Name": "Skip Turn",
+    "Effect": {
+      "$type": "SkipTurnEffect",
+      "Param": {
+        "$type": "TargetParam",
+        "HealthParam": 0
+      }
+    },
+    "TargetTypeEnum": "Self"
+  },
+  {
+    "$type": "skill",
+    "ID": "ea259270-586a-4703-bea4-bb9f128f18f0",
+    "Name": "Punch",
+    "Effect": {
+      "$type": "DamageEffect",
+      "Param": {
+        "$type": "TargetParam",
+        "HealthParam": 2,
+        "ExtraParam": {
+          "float-HitChance": 1.0
+        }
+      },
+      "DamageType": "melee"
+    },
+    "TargetTypeEnum": "Enemy"
+  },
+  {
+    "$type": "skill",
+    "ID": "ea259270-586a-4703-bea4-bb9f128f14625",
+    "Name": "Bite",
+    "Effect": {
+      "$type": "DamageEffect",
+      "Param": {
+        "$type": "TargetParam",
+        "HealthParam": 2,
+        "ExtraParam": {
+          "float-HitChance": 1.0
+        }
+      },
+      "DamageType": "melee"
+    },
+    "TargetTypeEnum": "Enemy"
+  },
+  {
+    "$type": "skill",
+    "ID": "62fae73b-6a2a-4fdd-8cd1-ffb028696c1d",
+    "Name": "Bone crunch",
+    "Effect": {
+      "$type": "DamageEffectRandom",
+      "Param": {
+        "$type": "TargetParam",
+        "HealthParam": 2,
+        "ExtraParam": {
+          "int-MinDamage": 1,
+          "float-HitChance": 1.0
+        }
+      },
+      "DamageType": "melee"
+    },
+    "TargetTypeEnum": "Enemy"
+  },
+  {
+    "$type": "skill",
+    "ID": "66c0db2a-957f-4b9b-89a2-42b1dd7c07a8",
+    "Name": "unraveling attack",
+    "Effect": {
+      "$type": "DamageEffectRandom",
+      "Param": {
+        "$type": "TargetParam",
+        "HealthParam": 8,
+        "ExtraParam": {
+          "int-MinDamage": 1,
+          "float-HitChance": 1.0
+        }
+      },
+      "DamageType": "decoding"
+    },
+    "TargetTypeEnum": "Enemy"
+  },
+  {
+    "$type": "skill",
+    "ID": "6bbddd8a-e813-417d-5t4c-87d91c3154aw",
+    "Name": "Slash Attack",
+    "Effect": {
+      "$type": "DamageEffect",
+      "Param": {
+        "$type": "TargetParam",
+        "HealthParam": 8,
+        "ExtraParam": {
+          "float-HitChance": 1.0
+        }
+      },
+      "DamageType": "melee"
+    },
+    "TargetTypeEnum": "Enemy"
+  },
+  {
+    "$type": "skill",
+    "ID": "6bbddd8a-e813-417d-5t4c-87d91c3154aw",
+    "Name": "Attack Stab",
+    "Effect": {
+      "$type": "DamageEffect",
+      "Param": {
+        "$type": "TargetParam",
+        "HealthParam": 4,
+        "ExtraParam": {
+          "float-HitChance": 1.0
+        }
+      },
+      "DamageType": "melee"
+    },
+    "TargetTypeEnum": "Enemy"
+  },
+  {
+    "$type": "skill",
+    "ID": "6bbddd8a-e813-417d-5t4c-87d91d5135wd",
+    "Name": "Quick Shot",
+    "Effect": {
+      "$type": "DamageEffect",
+      "Param": {
+        "$type": "TargetParam",
+        "HealthParam": 3,
+        "ExtraParam": {
+          "float-HitChance": 0.5
+        }
+      },
+      "DamageType": "range"
+    },
+    "TargetTypeEnum": "Enemy"
+  }
+]
