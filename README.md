@@ -2,7 +2,7 @@
 
 # This project isn't finished yet, as i'm with little time right now, I just finished the core parts of the game;
 # As sad as this is for me how wanted to show how much I learned with this book for his creator, I can't do much
-# about his right now... So the best solution that I find after 1 month of seeing what I could do was to write
+# about this right now... So the best solution that I find after 1 month of seeing what I could do was to write
 # in this documentation what I plan to add later on the finished project, both to informe you how is reading this
 # documentation and to remember me later when i have gone back here about what needed to be done.
 # Missing Parts:
@@ -20,8 +20,6 @@
 # from the CLI to a windows screen game, adding sprites to each character and things like that. (This last
 # one is more like a really maybe one because I'll feel like it's would be better to create a new C++ game
 # based on this one to do that.)
-
-#############################################################################################################
 
 # This is where the real documentation starts, as i should have started this from the beggining, this will be a little
 # short in detail, but I'll try to tell at lest how each part of the code connect and work together.
@@ -85,6 +83,17 @@ solution for this problem and end up cheating; I simples check in the constructo
 if the type of the param is right and then I let it's fly. But as this isn't the ideal, if you how is reading this
 know or thought, a you could do just this and pan, it would work without bandages, please send me a message
 of how you did it, this would be so much helpful that I can't ever start to describe.
+
+---
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+## The AILogic
+This class stores all AI logics (for now only the default one) and the score systems used by they (I need to move they for they own class); The Ai of this game is used by the AICharacters, how are a version of Characters that have a property to store the AILogic delegate; The default logic uses an adaptative AI system that will choose the best skill avaliable for him, both from his character skills and inventory items, including equiping items; This choose is made by giving a score to all skills and items avaliable to him, for now theses scores only calculate the skills or items that have more damage on that situations, with some small consideration for killing someone and having a weapon equiped; I plan to add new Logics to each base class (archer/assasin, healer, warrior) with they own focus on combat.
+
+This class methods:
+- `DefaultLogic` (This class runs the score methods for "Damage", "Healing" and "Gear", then compare the float value of they to decide what to do; She return a Action and the name of the action) (She also stores the currect character, group of enemies, group of allies and a default variable to her return value)
+- `DamageScore` (This method read a list of skills and enemies, then store the action and target in the out variable and return the total value of damage deal by the action in float value) (The calculation check for heal lost on all targets affected by the skill and if someone died, giving a fix score for each kill + the damage deal)
+- ``
 
 ---
 <!-- ----------------------------------------------------------------------------------------------------------------- -->
