@@ -1,28 +1,31 @@
 # The Final Battle
 
-# This project isn't finished yet, as i'm with little time right now, I just finished the core parts of the game;
-# As sad as this is for me how wanted to show how much I learned with this book for his creator, I can't do much
-# about this right now... So the best solution that I find after 1 month of seeing what I could do was to write
-# in this documentation what I plan to add later on the finished project, both to informe you how is reading this
-# documentation and to remember me later when i have gone back here about what needed to be done.
-# Missing Parts:
-# - Add variety of difficulty levels (for now the difficulty is name only and don't change the gameplay)
-#
-# - Add Turn base effects and skills that uses theses effects (can be group turn or target turn)
-#
-# - Add more characters (both monsters and heroes), skills, effects, weapons and armors
-#
-# - Add more combats (and maybe a dungeon system to explore)
-#
-# - Add unique AI for differents classes (archer, mage, warrior or tank, damage deal, healer)
-#
-# - As the last, maybe make this project a real game, putting the database in a MySQL database and migrating
-# from the CLI to a windows screen game, adding sprites to each character and things like that. (This last
-# one is more like a really maybe one because I'll feel like it's would be better to create a new C++ game
-# based on this one to do that.)
+# ALERT
+This project isn't finished yet, as i'm with little time right now, I just finished the core parts of the game;
+As sad as this is for me how wanted to show how much I learned with this book for his creator, I can't do much
+about this right now... So the best solution that I find after 1 month of seeing what I could do was to write
+in this documentation what I plan to add later on the finished project, both to informe you how is reading this
+documentation and to remember me later when i have gone back here about what needed to be done.
+Missing Parts:
+- Add variety of difficulty levels (for now the difficulty is name only and don't change the gameplay)
 
-# This is where the real documentation starts, as i should have started this from the beggining, this will be a little
-# short in detail, but I'll try to tell at lest how each part of the code connect and work together.
+- Add Turn base effects and skills that uses theses effects (can be group turn or target turn)
+
+- Add more characters (both monsters and heroes), skills, effects, weapons and armors
+
+- Add more combats (and maybe a dungeon system to explore)
+
+- Add unique AI for differents classes (archer, mage, warrior or tank, damage deal, healer)
+
+- As the last, maybe make this project a real game, putting the database in a MySQL database and migrating
+from the CLI to a windows screen game, adding sprites to each character and things like that. (This last
+one is more like a really maybe one because I'll feel like it's would be better to create a new C++ game
+based on this one to do that.)
+
+This is where the real documentation starts, as i should have started this from the beggining, this will be a little
+short in detail, but I'll try to tell at lest how each part of the code connect and work together.
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+
 
 ## The MAIN:
 Here is where you start to run the program (WOW what amazing idea, everyone should start do the same), all the
