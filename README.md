@@ -1,34 +1,12 @@
 # The Final Battle
-
-# ALERT
-This project isn't finished yet, as i'm with little time right now, I just finished the core parts of the game;
-As sad as this is for me how wanted to show how much I learned with this book for his creator, I can't do much
-about this right now... So the best solution that I find after 1 month of seeing what I could do was to write
-in this documentation what I plan to add later on the finished project, both to informe you how is reading this
-documentation and to remember me later when i have gone back here about what needed to be done.
-Missing Parts:
-- Add variety of difficulty levels (for now the difficulty is name only and don't change the gameplay)
-
-- Add Turn base effects and skills that uses theses effects (can be group turn or target turn)
-
-- Add more characters (both monsters and heroes), skills, effects, weapons and armors
-
-- Add more combats (and maybe a dungeon system to explore)
-
-- Add unique AI for differents classes (archer, mage, warrior or tank, damage deal, healer)
-
-- As the last, maybe make this project a real game, putting the database in a MySQL database and migrating
-from the CLI to a windows screen game, adding sprites to each character and things like that. (This last
-one is more like a really maybe one because I'll feel like it's would be better to create a new C++ game
-based on this one to do that.)
-
-This is where the real documentation starts, as i should have started this from the beggining, this will be a little
-short in detail, but I'll try to tell at lest how each part of the code connect and work together.
 <!-- ---------------------------------------------------------------------------------------------------------------- -->
+This project is a simple structure for a turn-base RPG game on the console. The player fight some wave of responsive AI with differents skills and items until the final boss been defeated. There is differents difficulties and game mode (AI VS AI or Player VS AI) and a full text interface for skills, items, targets system end combat.
 
+---
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
 
 ## The MAIN:
-Here is where you start to run the program (WOW what amazing idea, everyone should start do the same), all the
+Here is where you start to run the program, all the
 pre-configurations are inicialized here, for now there is only the type of game (AI VS PLAYER or AI VS AI) and
 the game difficulty (that don't do much for now).
 After configure, he calls the main loop of the game with the pre-configurations.
@@ -46,12 +24,12 @@ things like who is playing the currect turn and is he a monster or a hero, and a
 all the actions that will be used in the end of a group turn.
 
 This class methods are:
-- `Run` (how runs the mini game logic)
-- `RunTurnLogic` (how runs the logic of each groups turn)
-- `CheckWin` (how check if the group win the game)
-- `TryEndWave` (how check if a monster wave has been defeated)
-- `RemoveDeadCharactes` (how remove any character that has 0 HP in the combat)
-- `StolenItem` (how take the items of 1 group and put they in the inventory of the other)
+- `Run`: how runs the mini game logic
+- `RunTurnLogic`: how runs the logic of each groups turn
+- `CheckWin`: how check if the group win the game
+- `TryEndWave`: how check if a monster wave has been defeated
+- `RemoveDeadCharactes`: how remove any character that has 0 HP in the combat
+- `StolenItem`: how take the items of 1 group and put they in the inventory of the other
 
 ---
 <!-- ----------------------------------------------------------------------------------------------------------------- -->
@@ -70,13 +48,13 @@ she is a transformer (not the type that you can drive), every instance of this c
 that can be used by others, as a example (deal damage, heal, skipTurn).
 
 This class stores:
-- `IEffectParam` (This is the parameter used by her functionality, if she deals damage, her tells how much and in who)
-- `ActionTypeEnum` (This enumeration tells what the type of effect this is, is a damage Effect, maybe a heal one or a
-strategic effect)
+- `IEffectParam`: This is the parameter used by her functionality, if she deals damage, her tells how much and in who
+- `ActionTypeEnum`: This enumeration tells what the type of effect this is, is a damage Effect, maybe a heal one or a
+strategic effect
 
 This class methods:
-- `Execute` (this method runs the effect of this class using the `IEffectParam` data as parameter)
-- `Copy` (create a new copy of this effect with a new copy of the `EffectParam`)
+- `Execute`: this method runs the effect of this class using the `IEffectParam` data as parameter
+- `Copy`: create a new copy of this effect with a new copy of the `EffectParam`
 
 PS: As this class is a bit special, i needed to use inheritance to the `IEffectParam` property, the problem is
 that as the interface `IEffect` needed to be versatil; She needed to define this parameter as a interface `IEffectParam`,
@@ -94,14 +72,47 @@ of how you did it, this would be so much helpful that I can't ever start to desc
 This class stores all AI logics (for now only the default one) and the score systems used by they (I need to move they for they own class); The Ai of this game is used by the AICharacters, how are a version of Characters that have a property to store the AILogic delegate; The default logic uses an adaptative AI system that will choose the best skill avaliable for him, both from his character skills and inventory items, including equiping items; This choose is made by giving a score to all skills and items avaliable to him, for now theses scores only calculate the skills or items that have more damage on that situations, with some small consideration for killing someone and having a weapon equiped; I plan to add new Logics to each base class (archer/assasin, healer, warrior) with they own focus on combat.
 
 This class methods:
-- `DefaultLogic` (This class runs the score methods for "Damage", "Healing" and "Gear", then compare the float value of they to decide what to do; She return a Action and the name of the action) (She also stores the currect character, group of enemies, group of allies and a default variable to her return value)
-- `DamageScore` (This method read a list of skills and enemies, then store the action and target in the out variable and return the total value of damage deal by the action in float value) (The calculation check for heal lost on all targets affected by the skill and if someone died, giving a fix score for each kill + the damage deal)
-- ``
+- `DefaultLogic`: This class runs the score methods for "Damage", "Healing" and "Gear", then compare the float value of they to decide what to do; She return a Action and the name of the action) (She also stores the currect character, group of enemies, group of allies and a default variable to her return value
+- `DamageScore`: This method read a list of skills and enemies, then store the action and target in the out variable and return the total value of damage deal by the action in float value; The calculation check for heal lost on all targets affected by the skill and if someone died, giving a fix score for each kill + the damage deal
+- `HealingScore`: This method evaluate all healing skills and items avaliable, selecting the one with the best healing value for allies with low health, considering damage prevention and resurrection possibilities
+- `GearScore`: This method score all equipable items based on the character's current needs, giving a high score if gear on inventory is better than the current equiped gear 
 
 ---
 <!-- ----------------------------------------------------------------------------------------------------------------- -->
 
-For now this is it, later I'll continue to add the rest of the documentation with time, as a simples resume for now:
+## The Combat Group & Enemies Wave:
+This classes are responsible for managing groups of characters in combat. `CombatGroup` represents the player's party
+(or AI party) while `EnemiesWave` represents the enemy formation. Both handle character organization, status updates,
+and turn order management. They work together to provide a structured way to manage multiple characters simultaneously
+in the battle system.
+
+This class methods are:
+- `AddCharacter`: adds a character to the group
+- `RemoveCharacter`: removes a character from the group
+- `GetAllCharacters`: returns all characters in the group
+- `GetAliveCharacters`: returns only alive characters
+- `UpdateGroup`: updates the status of all characters in the group
+
+---
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+## The Render System:
+As mentioned before, `Render` is the place where all interface methods and strings are placed. It handles all the 
+display logic for the battle system, character stats, menu options, and any visual feedback to the player. If you 
+need to add anything related to the interface or change how information is displayed to the user, this is the place 
+to make those modifications.
+
+This class provides methods for:
+- Displaying battle information
+- Showing character stats
+- Rendering menus and options
+- Outputting action results and combat log
+
+---
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+## Summary of Architecture:
+
 - The `IAction` interface is what implement the `Effect` class, she is the base of the skills and comsumibles items
 #
 - `Skill` class simples has a effect stored and when tried to used, she configure the `EffectParam` of the effect and
@@ -128,3 +139,9 @@ interface, this is the place.
 - The last one is the `Miscellaneous` folder, here is stored the files that I don't know how to categorize (like magic),
 there is only 2 class's, `ID` (how i really shound have used from the start...) and `BaseMethods` (that are a export
 of my own library methods that I was using as a dependence).
+
+---
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+## Conclusion:
+This project is the structure of a turn-based RPG system in C#.
