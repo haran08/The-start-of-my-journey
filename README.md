@@ -1,6 +1,19 @@
 # The Final Battle
 <!-- ---------------------------------------------------------------------------------------------------------------- -->
-This project is a simple structure for a turn-base RPG game on the console. The player fight some wave of responsive AI with differents skills and items until the final boss been defeated. There is differents difficulties and game mode (AI VS AI or Player VS AI) and a full text interface for skills, items, targets system end combat.
+This project is a simple structure for a turn-base RPG game on the console. The player fight some wave of responsive AI with differents skills and items until the final boss been defeated.
+
+There is differents difficulties and game mode (AI VS AI or Player VS AI or Player VS Player)
+![test](Assets/Game_mode.png)
+
+
+A text interface for Combat
+![Combat Interface](Assets/Combat_interface.png)
+
+Skills & Targets system
+![Skills & Target system Interface](Assets/Target_&_Skill_interface.png)
+
+and Inventory.
+![Inventory Interface](Assets/Inventory_Interface.png)
 
 ---
 <!-- ----------------------------------------------------------------------------------------------------------------- -->
