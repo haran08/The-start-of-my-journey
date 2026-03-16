@@ -13,7 +13,7 @@ Skills & Targets system
 ![Skills & Target system Interface](Assets/Target_&_Skill_interface.png)
 
 and Inventory.
-![Inventory Interface](Assets/Inventory_Interface.png)
+![Inventory Interface](Assets/Inventory_interface.png)
 
 ---
 <!-- ----------------------------------------------------------------------------------------------------------------- -->
