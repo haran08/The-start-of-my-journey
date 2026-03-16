@@ -18,10 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include=".gitCommitMetadata\Combat interface.png" />
-    <Content Include=".gitCommitMetadata\Game mode.png" />
-    <Content Include=".gitCommitMetadata\Inventory interface.png" />
-    <Content Include=".gitCommitMetadata\Target &amp; Skill interface.png" />
+    <Content Include="Assets\Combat interface.png" />
+    <Content Include="Assets\Game mode.png" />
+    <Content Include="Assets\Inventory interface.png" />
+    <Content Include="Assets\Target &amp; Skill interface.png" />
   </ItemGroup>
 
   <ItemGroup>
