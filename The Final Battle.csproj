@@ -18,6 +18,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include=".gitCommitMetadata\Combat interface.png" />
+    <Content Include=".gitCommitMetadata\Game mode.png" />
+    <Content Include=".gitCommitMetadata\Inventory interface.png" />
+    <Content Include=".gitCommitMetadata\Target &amp; Skill interface.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="C:\VS Projects\C#\The Final Battle\.editorconfig" />
   </ItemGroup>
 
