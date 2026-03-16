@@ -18,10 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\Combat interface.png" />
-    <Content Include="Assets\Game mode.png" />
-    <Content Include="Assets\Inventory interface.png" />
-    <Content Include="Assets\Target &amp; Skill interface.png" />
+    <Content Include="Assets\Combat_interface.png" />
+    <Content Include="Assets\Game_mode.png" />
+    <Content Include="Assets\Inventory_interface.png" />
+    <Content Include="Assets\Target_&amp;_Skill_interface.png" />
   </ItemGroup>
 
   <ItemGroup>
